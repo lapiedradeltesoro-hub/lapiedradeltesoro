@@ -1,0 +1,490 @@
+/* ==========================================
+   1. VARIABLES DE COLOR Y FUENTES
+   ========================================== */
+
+:root {
+    /* Paleta Día de Muertos */
+    --fondo-oscuro: #100b16;     /* Morado/Negro muy oscuro para la noche */
+    --cempasuchil: #ff9100;      /* Naranja vibrante */
+    --rosa-mexicano: #e91e63;    /* Rosa fuerte */
+    --morado-mistico: #673ab7;   /* Morado de papel picado */
+    --texto-claro: #f4efe6;      /* Color hueso para textos */
+}
+
+/*
+  Para usar EDO SZ, necesitas tener el archivo 'edo.ttf' en la misma carpeta.
+  Si no lo tienes aún, he puesto 'Impact' como respaldo automático.
+*/
+
+@font-face {
+
+    font-family: 'Carnevalee Freakshow';
+    src: url('Carnevalee Freakshow.ttf') format('truetype');
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    background-color: var(--fondo-oscuro);
+    color: var(--texto-claro);
+    /* Aplicamos Century Gothic para todo el cuerpo del texto */
+    font-family: 'Century Gothic', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   2. BARRA DE NAVEGACIÓN
+   ========================================== */
+body.home .navbar {
+    border-bottom: none;
+}
+
+body.home .navbar {
+    border-bottom: none;
+}
+.navbar {
+    position: fixed; /* Se queda pegada arriba */
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    z-index: 1000;
+    background: rgba(16, 11, 22, 0.2); /* Ligeramente transparente */
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid #673ab7;
+}
+
+/* Clases para páginas sin video (como talleres) */
+.navbar.solida {
+    background: var(--fondo-oscuro);
+    border-bottom: 2px solid var(--morado-mistico);
+}
+
+
+
+.logo {
+    font-family: 'Carnevalee Freakshow', Impact, sans-serif; /* Fuente EDO SZ para el título */
+    font-size: 3rem;
+    color: var(--cempasuchil);
+    letter-spacing: 2px;
+}
+
+.logo-img a {
+  display: flex;
+  align-items: center; /* Centra verticalmente los logos dentro del enlace */
+}
+
+.logo-img img {
+  height: 45px; /* Reduce un poco la altura para que encajen perfecto en la barra */
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-img img:nth-child(2) {
+  height: 60px; /* Ajusta el segundo logo de manera proporcional */
+}
+
+.nav-links a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+
+
+.nav-links a:hover {
+    color: var(--rosa-mexicano);
+}
+
+/* ==========================================
+   3. HERO (SECCIÓN PRINCIPAL CON VIDEO)
+   ========================================== */
+
+.hero {
+    position: relative;
+    height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video llene la pantalla sin deformarse */
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Capa oscura al 50% para que el texto se lea */
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-title {
+    font-family: 'Carnevalee Freakshow', Impact, sans-serif;
+    font-size: 5rem;
+    color: var(--cempasuchil);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-subtitle2 {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   4. TIPOGRAFÍAS Y PÁRRAFOS GENERALES
+   ========================================== */
+
+.titulo-seccion {
+    font-family: 'Carnevalee Freakshow', Impact, sans-serif;
+    font-size: 4rem;
+    color: var(--cempasuchil);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.texto-parrafo {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #cccccc;
+}
+
+/* ==========================================
+   5. SECCIÓN PREVENTA
+   ========================================== */
+
+.preventa {
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.preventa-caja {
+    background: linear-gradient(135deg, var(--morado-mistico), #3f1b75);
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid var(--cempasuchil);
+    box-shadow: 0 10px 30px rgba(255, 145, 0, 0.2);
+}
+
+.preventa-caja h2 {
+    font-family: 'Carnevalee Freakshow', Impact, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--cempasuchil);
+    margin: 20px 0;
+}
+
+.precio span {
+    font-size: 1rem;
+    color: var(--texto-claro);
+}
+
+.btn-naranja {
+    display: inline-block;
+    background-color: var(--cempasuchil);
+    color: var(--fondo-oscuro);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-naranja:hover {
+    background-color: var(--rosa-mexicano);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   6. JARDÍN DE LOS RECUERDOS (INFO Y CARRUSEL)
+   ========================================== */
+
+.info-evento, .jardin-recuerdos {
+    padding: 3rem 5%;
+}
+
+.pequeno-video-container {
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid var(--morado-mistico);
+}
+
+.pequeno-video {
+    width: 100%;
+    display: block;
+}
+
+/* Carrusel simple desplazable horizontalmente */
+.carrusel-imagenes {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 5%;
+    scroll-snap-type: x mandatory;
+}
+
+.carrusel-imagenes-acceso {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 5%;
+    scroll-snap-type: x mandatory;
+}
+
+.carrusel-item {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    width: 280px; 
+    border: 2px solid var(--cempasuchil); /* El borde naranja ahora abraza todo el cuadro */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #1a1224; /* Color de fondo para la zona del texto */
+    text-align: center;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border: none; /* Quitamos el borde individual de la img */
+    border-radius: 0;
+}
+
+.carrusel-texto {
+    padding: 10px 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--texto-claro);
+}
+
+/* ==========================================
+   7. PÁGINA TALLERES
+   ========================================== */
+
+.header-talleres {
+    padding: 150px 5% 50px 5%; /* Padding top alto para evitar que la navbar lo tape */
+    text-align: center;
+}
+
+.grid-talleres {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 0 5% 5rem 5%;
+}
+
+.taller-card {
+    background-color: #1a1224;
+    border: 1px solid var(--morado-mistico);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;             /* NUEVO: Permite alinear los elementos internos verticalmente */
+    flex-direction: column;    /* NUEVO: Organiza la imagen, texto y precio en columna */
+}
+
+.taller-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid var(--rosa-mexicano);
+}
+
+.taller-info {
+    padding: 20px;
+    display: flex;             /* NUEVO: Hace flexible el contenido de texto */
+    flex-direction: column;    /* NUEVO */
+    flex-grow: 1;              /* NUEVO: Hace que ocupe todo el alto disponible en la tarjeta */
+}
+
+.texto-parrafo {
+    flex-grow: 1;              /* NUEVO: Expande el párrafo para equilibrar espacios cortos */
+    margin-bottom: 15px;
+}
+
+.taller-costo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--rosa-mexicano);
+    margin-top: auto;          /* NUEVO: Empuja el precio siempre hacia el fondo de la tarjeta */
+}
+
+
+/* ==========================================
+   8. FOOTER
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #08050b;
+    border-top: 1px solid var(--morado-mistico);
+} 
+
+/* ==========================================
+   9. AJUSTE PARA EL ACORDEÓN DE TALLERES (VIDEOS)
+   ========================================== */
+
+/* Asegura que el acordeon responda al cursor y tenga un borde activo llamativo */
+.faq-item {
+    transition: border-color 0.3s ease;
+}
+
+.faq-item.active {
+    border-color: var(--rosa-mexicano) !important;
+}
+
+/* Controla la apertura fluida del contenedor del video */
+.faq-item .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease;
+    padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Espacio suficiente para albergar el video */
+    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+}
+
+/* =========================================
+   ESTILOS PARA LAS VENTANAS MODALES DE HOSPEDAJE
+   ========================================= */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #1a1128;
+    border: 2px solid var(--morado-mistico);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 850px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 2rem;
+    position: relative;
+    color: #fff;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: #332244;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.modal-cerrar:hover {
+    background: var(--rosa-mexicano);
+}
+
+/* Ocultar el navbar fuera de la pantalla por defecto */
+.navbar {
+    position: fixed;
+    top: -90px; /* Altura aproximada del navbar para que quede oculto arriba */
+    left: 0;
+    width: 100%;
+    transition: top 0.4s ease-in-out;
+    z-index: 9999;
+}
+
+/* Clase que activará JavaScript para mostrarlo */
+.navbar.visible {
+    top: 0;
+}
+
+/* Opcional: Una pequeña zona invisible arriba para detectar cuando acercas el mouse */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px; /* Zona sensible en el borde superior */
+    z-index: 9998;
+}
+
+
+
+

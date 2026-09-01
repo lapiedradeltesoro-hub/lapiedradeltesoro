@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Piedra del Tesoro</title>
+    <link rel="icon" href="img/Logo viviendo oficial 2026-36 (1).png">  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpagina">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="logo-img">
+  <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+    <img src="img/Logo viviendo oficial 2026-36 (1).png" alt="La Piedra del Tesoro" style="height: 70px; width: auto;">
+    <img src="img/Logo viviendo oficial 2026-37.png" alt="Segundo Logo" style="height: 100px; width: auto;">
+  </a>
+</div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="talleres.html">Talleres</a>
+            <a href="transporte.html">Transporte</a>
+            <a href="hospedaje.html">Hospedaje</a>
+            <a href="preguntas.html">Preguntas frecuentes</a>
+        </nav>
+    </header>
+
+    <!-- CABECERA -->
+    <header class="header-talleres">
+        <h1 class="titulo-seccion">Quédate a vivir la experiencia completa</h1>
+        <p class="texto-parrafo" style="margin-bottom: 20px;">
+            Después de disfrutar <em><strong>El llamado de los ancestros</strong></em>, quédate a dormir en medio de la Sierra Fría y despierta rodeado de naturaleza.
+        </p>
+        <p class="texto-parrafo" style="color: var(--cempasuchil); font-weight: bold;">
+            *El hospedaje no está incluido en el acceso al evento y se reserva por separado.*
+        </p>
+    </header>
+
+  <!-- SECCIÓN VIDEO DE LAS INSTALACIONES -->
+    <section style="padding: 0 5%; max-width: 800px; margin: 0 auto 4rem auto; text-align: center;">
+        <h2 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; font-size: 2.2rem; color: var(--cempasuchil); margin-bottom: 20px;">Conoce nuestras instalaciones</h2>
+        
+        <div style="max-width: 650px; height: 350px; margin: 0 auto; border-radius: 15px; overflow: hidden; border: 3px solid var(--morado-mistico);">
+            <video class="pequeno-video" controls autoplay muted loop style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <source src="img/Instalaciones LPDT - 15.1.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+        </div>
+    </section>
+
+    <!-- CARRUSEL DE FOTOS DE LAS INSTALACIONES -->
+    <section style="padding: 0 5%; margin-bottom: 4rem;">
+        <h2 class="titulo-seccion" style="font-size: 2.5rem; margin-bottom: 10px;">Galería del lugar</h2>
+        <div class="carrusel-imagenes">
+            <div class="carrusel-item"><img src="img/476465861_1007728748043388_3241496396793927981_n.jpg" alt="Instalación 1"></div>
+            <div class="carrusel-item"><img src="img/516772699_1119872560162339_2522266165843640774_n (1).jpg" alt="Instalación 2"></div>
+            <div class="carrusel-item"><img src="img/476465861_1007728748043388_3241496396793927981_n.jpg" alt="Instalación 3"></div>
+            <div class="carrusel-item"><img src="img/516772699_1119872560162339_2522266165843640774_n (1).jpg" alt="Instalación 4"></div>
+        </div>
+    </section>
+
+    <!-- CARDS DE TIPOS DE HOSPEDAJE -->
+    <section style="padding: 0 5%; max-width: 1400px; margin: 0 auto 4rem auto;">
+        <h2 class="titulo-seccion" style="font-size: 2.8rem; margin-bottom: 30px;">Opciones de Hospedaje</h2>
+        
+        <div class="carrusel-imagenes">
+            
+            <!-- Card 1: Camping -->
+            <div class="carrusel-item" style="flex: 0 0 280px; text-align: left; cursor: pointer;" onclick="abrirModal('modal-camping')">
+                <div class="taller-img" style="background-image: url('img/camping.png'); height: 180px;"></div>
+                <div class="taller-info" style="padding: 1.5rem;">
+                    <h3 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; font-size: 1.5rem; color: var(--cempasuchil); margin-bottom: 10px;">🏕️ Camping</h3>
+                    <p class="texto-parrafo" style="font-size: 0.95rem; text-align: left;">Trae tu casa de campaña y acampa bajo el cielo estrellado de la sierra en un área designada y segura.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Literas -->
+            <div class="carrusel-item" style="flex: 0 0 280px; text-align: left; cursor: pointer;" onclick="abrirModal('modal-literas')">
+                <div class="taller-img" style="background-image: url('img/literas.jpg'); height: 180px;"></div>
+                <div class="taller-info" style="padding: 1.5rem;">
+                    <h3 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; font-size: 1.5rem; color: var(--cempasuchil); margin-bottom: 10px;">🛏️ Literas</h3>
+                    <p class="texto-parrafo" style="font-size: 0.95rem; text-align: left;">Opción compartida y práctica dentro de instalaciones techadas para descansar plácidamente.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Habitaciones -->
+            <div class="carrusel-item" style="flex: 0 0 280px; text-align: left; cursor: pointer;" onclick="abrirModal('modal-habitaciones')">
+                <div class="taller-img" style="background-image: url('img/habitacion.jpg'); height: 180px;"></div>
+                <div class="taller-info" style="padding: 1.5rem;">
+                    <h3 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; font-size: 1.5rem; color: var(--cempasuchil); margin-bottom: 10px;">🚪 Habitaciones</h3>
+                    <p class="texto-parrafo" style="font-size: 0.95rem; text-align: left;">Espacios privados y cómodos equipados para consentirte y brindarte el máximo descanso.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Cabañas -->
+            <div class="carrusel-item" style="flex: 0 0 280px; text-align: left; cursor: pointer;" onclick="abrirModal('modal-cabanas')">
+                <div class="taller-img" style="background-image: url('img/cabañae.jpg'); height: 180px;"></div>
+                <div class="taller-info" style="padding: 1.5rem;">
+                    <h3 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; font-size: 1.5rem; color: var(--cempasuchil); margin-bottom: 10px;">🏡 Cabañas</h3>
+                    <p class="texto-parrafo" style="font-size: 0.95rem; text-align: left;">Vive la experiencia rústica total en una cabaña en medio del bosque con un ambiente cálido.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VENTANAS MODALES PARA CADA OPCIÓN -->
+    
+    <!-- Modal Camping -->
+    <div id="modal-camping" class="modal-overlay">
+        <div class="modal-contenido">
+            <button class="modal-cerrar" onclick="cerrarModal('modal-camping')">&times;</button>
+            <h2 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; color: var(--cempasuchil); font-size: 2rem; margin-bottom: 15px;">Detalles del Alojamiento: Camping</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                <img src="img/campingb.jpg" style="width: 100%; border-radius: 10px; height: 200px; object-fit: cover;" alt="Camping 1">
+                <img src="img/campingg.png" style="width: 100%; border-radius: 10px; height: 200px; object-fit: cover;" alt="Camping 2">
+            </div>
+            <p class="texto-parrafo" style="margin-bottom: 15px;">Zona de acampar con baños exteriores, fogatas, asadores y mesas.</p>
+            <p style="color: var(--cempasuchil); font-weight: bold;">Opción de renta de casas de campaña, sleeping bags, colchonetas, hamakas, sillas de camping, etc.</p>
+        </div>
+    </div>
+
+    <!-- Modal Literas -->
+    <div id="modal-literas" class="modal-overlay">
+        <div class="modal-contenido">
+            <button class="modal-cerrar" onclick="cerrarModal('modal-literas')">&times;</button>
+            <h2 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; color: var(--cempasuchil); font-size: 2rem; margin-bottom: 15px;">Detalles del Alojamiento: Literas</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                <img src="img/literasb.jpg" style="width: 100%; border-radius: 10px; height: 200px; object-fit: cover;" alt="Literas 1">
+                <img src="img/literasl.jpg" style="width: 100%; border-radius: 10px; height: 200px; object-fit: cover;" alt="Literas 2">
+            </div>
+            <p class="texto-parrafo" style="margin-bottom: 15px;">Litera en dormitorio compartido cuenta con baños y regaderas. .</p>
+            <p style="color: var(--cempasuchil); font-weight: bold;">*Capacidad de hasta 40 personas (si tu grupo es mayor de 20 personas pregunta por WhatsApp para hacer una reserva especial).
+</p>
+        </div>
+    </div>
+
+    <!-- Modal Habitaciones -->
+    <div id="modal-habitaciones" class="modal-overlay">
+        <div class="modal-contenido">
+            <button class="modal-cerrar" onclick="cerrarModal('modal-habitaciones')">&times;</button>
+            <h2 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; color: var(--cempasuchil); font-size: 2rem; margin-bottom: 15px;">Detalles del Alojamiento: Habitaciones</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                <img src="img/habitacion5.jpg" style="width: 100%; border-radius: 10px; height: 200px; object-fit: cover;" alt="Habitaciones 1">
+                <img src="img/habitacionc.jpg" style="width: 100%; border-radius: 10px; height: 200px; object-fit: cover;" alt="Habitaciones 2">
+            </div>
+            <p class="texto-parrafo" style="margin-bottom: 15px;">Habitación privada con baño y regadera. (doble, triple, cusdruple, quintuple y sextuple)</p>
+            <p style="color: var(--cempasuchil); font-weight: bold;">Comodidades y servicios de la habitación:
+                <ul>
+                    <li>Area Comun</li>
+                    <li>Baño</li>
+                    <li>Cocina (comaprtida)</li>
+                    <li>Hall (compartido)</li>
+                    <li>Regadera</li>
+                    <li>Sala de mesas de juego (compartido)</li>
+</ul></p>
+        </div>
+    </div>
+
+    <!-- Modal Cabañas -->
+    <div id="modal-cabanas" class="modal-overlay">
+        <div class="modal-contenido">
+            <button class="modal-cerrar" onclick="cerrarModal('modal-cabanas')">&times;</button>
+            <h2 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; color: var(--cempasuchil); font-size: 2rem; margin-bottom: 15px;">Detalles del Alojamiento: Cabañas</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                <img src="img/cabaña.jpg" style="width: 100%; border-radius: 10px; height: 200px; object-fit: cover;" alt="Cabañas 1">
+                <img src="img/cabañac.jpg" style="width: 100%; border-radius: 10px; height: 200px; object-fit: cover;" alt="Cabañas 2">
+            </div>
+            <p class="texto-parrafo" style="margin-bottom: 15px;">Cabaña privada para 2 personas ubicada aproximadamente a 200 metros caminando desde de las instalaciones.
+Cuenta con cama King Size, baño privado, cocineta (utensilios) y chimenea.</p>
+            <p style="color: var(--cempasuchil); font-weight: bold;">*No recomendable para personas mayores de 60 años, ni personas con alguna lesión.
+*Niños siempre con supervisión.
+*El acceso a la cabaña es por una ramapa y escaleras para tomarlo en cuenta.</p>
+        </div>
+    </div>
+
+    <!-- SCRIPT PARA CONTROLAR LAS VENTANAS MODALES -->
+    <script>
+        function abrirModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function cerrarModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+
+    <!-- SECCIÓN POR QUÉ QUEDARSE Y BOTÓN DE RESERVA -->
+    <section style="padding: 3rem 5%; text-align: center; background-color: rgba(103, 58, 183, 0.1); border-top: 1px solid var(--morado-mistico);">
+        <h2 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; font-size: 2.5rem; color: var(--cempasuchil); margin-bottom: 15px;">🌲 ¿Por qué quedarte en el campamento?</h2>
+        <p class="texto-parrafo" style="max-width: 700px; margin-bottom: 2rem;">
+            Porque el evento termina el sábado por la noche y la experiencia no tiene por qué terminar ahí. Quédate en Sierra Fría, disfruta de la tranquilidad de la montaña y continúa viviendo el ambiente de <em>El llamado de los ancestros</em> al día siguiente.
+        </p>
+
+        <div class="preventa-caja" style="max-width: 600px; margin: 0 auto;">
+            <h3 style="font-family: 'Carnevalee Freakshow', Impact, sans-serif; font-size: 2rem; color: var(--texto-claro); margin-bottom: 15px;">¿Ya tienes tu código de hospedaje?</h3>
+            <a href="https://hotels.cloudbeds.com/es/reservation/KVsIRK/?currency=mxn" class="btn-naranja" style="margin-bottom: 15px; display: inline-block;">[ RESERVAR HOSPEDAJE ]</a>
+            <p style="font-size: 0.95rem; color: #cccccc; margin-top: 10px;">Si aún no tienes tu código, primero adquiere tu <a href="boletos.html" style="color: var(--rosa-mexicano); font-size: 0.85rem; margin-bottom: 0.8rem; font-weight: bold; padding-top: 10px;">acceso</a> al evento.</p>
+        </div>
+    </section>
+
+   <!-- PIE DE PÁGINA -->
+    <footer>
+        <a href="https://www.instagram.com/piedradeltesoro_campamento/"><img src="img/ig.png" alt="Instagram" width="36" height="36" style="filter: brightness(0) invert(1);"></a>
+        <a href="https://www.facebook.com/piedradeltesoro.campamento"><img src="img/face.png" alt="Facebook" width="36" height="36" style="filter: brightness(0) invert(1);"></a>
+        <a href="https://wa.me/524493974212"><img src="img/whats.png" alt="WhatsApp" width="36" height="36" style="filter: brightness(0) invert(1);"></a>
+        <a href="https://www.tiktok.com/@lapiedradeltesoro"><img src="img/tt.png" alt="TikTok" width="36" height="36" style="filter: brightness(0) invert(1);"></a>
+        <p>&copy; 2026 La Piedra del Tesoro, Aguascalientes. Todos los derechos reservados.</p>
+    </footer>
+<script>
+    const navbar = document.querySelector('.navbar');
+
+    // Para computadoras: Mostrar cuando el mouse está cerca del borde superior (primeros 40 pixeles)
+    window.addEventListener('mousemove', (e) => {
+        if (e.clientY <= 40) {
+            navbar.classList.add('visible');
+        } else if (e.clientY > 120 && window.scrollY > 50) {
+            // Se vuelve a ocultar si alejas el mouse y ya bajaste en la página
+            navbar.classList.remove('visible');
+        }
+    });
+
+    // Para celulares o pantallas táctiles: Hacer que aparezca/desaparezca al tocar la pantalla
+    window.addEventListener('click', (e) => {
+        // Si haces click muy cerca de la parte superior, alterna la visibilidad
+        if (e.clientY <= 100) {
+            navbar.classList.toggle('visible');
+        }
+    });
+</script>
+
+</body>
+</html>

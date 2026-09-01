@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Piedra del Tesoro</title>
+    <link rel="icon" href="img/Logo viviendo oficial 2026-36 (1).png">  
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="home">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="logo-img">
+  <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+    <img src="img/Logo viviendo oficial 2026-36 (1).png" alt="La Piedra del Tesoro" style="height: 70px; width: auto;">
+    <img src="img/Logo viviendo oficial 2026-37.png" alt="Segundo Logo" style="height: 100px; width: auto;">
+  </a>
+</div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="talleres.html">Talleres</a>
+            <a href="transporte.html">Transporte</a>
+            <a href="hospedaje.html">Hospedaje</a>
+            <a href="preguntas.html">Preguntas frecuentes</a>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN HERO (Video de fondo estilo Panic Studio) -->
+    <section class="hero">
+        <!-- El video debe estar en tu carpeta. Atributos: se reproduce solo, sin sonido y en bucle -->
+        <video autoplay muted loop playsinline id="videoFondo" class="hero-video">
+            <source src="img/Video principal.mp4" type="video/mp4">
+        </video>
+        <!-- Audio independiente para el ambiente -->
+        <audio id="musicaFondo" loop>
+        <source src="img/audio vp.MP3" type="audio/mp3">
+        </audio>
+        
+        <!-- Botón flotante de audio -->
+        <button id="btnAudio" style="position: absolute; bottom: 20px; right: 20px; z-index: 10; background: rgba(16, 11, 22, 0.8); border: 2px solid var(--cempasuchil); color: var(--texto-claro); padding: 10px 15px; border-radius: 50px; cursor: pointer; font-family: 'Century Gothic', sans-serif; display: flex; align-items: center; gap: 8px; backdrop-filter: blur(5px);">
+        <span id="iconoBocina">🔇</span> <span id="textoAudio">Activar Sonido</span>
+        </button>
+        
+        <!-- Capa oscura para que el texto resalte sobre el video -->
+        <div class="hero-overlay"></div>
+
+        <!-- Contenido sobre el video -->
+        <div class="hero-content">
+            <img src="img/Logo viviendo oficial 2026-39.png" alt="Título" style="width: 1000px; max-width: 100%;margin-top: 120px;">
+            <p class="hero-subtitle">24 y 25 de Octubre</p>
+            <p class="hero-subtitle2"><a href="https://www.google.com/maps/place/La+Piedra+del+Tesoro+Campamento/@22.185581,-102.5660725,17z/data=!3m1!4b1!4m9!3m8!1s0x868276fbf5c27b5d:0x3f1bc9a50ee5d946!5m2!4m1!1i2!8m2!3d22.185581!4d-102.5660725!16s%2Fg%2F11bwy_030t?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" style="color: var(--texto-claro); text-decoration: none;">📍La Piedra del Tesoro Campamento, Sierra Fría, Aguascalientes.</a></p>
+            <p class="hero-subtitle">Un fin de semana donde el día de muertos cobra vida entre montañas, leyendas, tradición y recuerdos.</p>
+            <div style="margin-top: 40px;"><a href="boletos.html" class="btn-naranja">Quiero vivirlo</a></div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: ¿QUÉ ES EL EVENTO? -->
+    <section class="info-evento">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="img/Letreros tipografia-41.png" alt="INFO EVENTO" style="max-width: 1100px; width: 100%; height: auto;">
+        </div>
+        <p class="texto-parrafo" style="text-align: center;">
+           Vive una experiencia familiar en la Sierra Fría donde las tradiciones cobran vida entre leyendas, historias, sabores, talleres y momentos para compartir.​
+           <p class="texto-parrafo" style="text-align: center; margin-top: 30px;">Naturaleza + tradición + convivencia + recuerdos.​</p>
+        </p>
+    </section>
+
+    <!-- SECCIÓN: CARRUSEL INTERMEDIO -->
+    <section>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="img/Letreros tipografia-41.png" alt="INFO EVENTO" style="max-width: 1100px; width: 100%; height: auto;">
+        </div>
+        <p class="texto-parrafo" style="font-size: 25px;">
+            Una experiencia que cobra vida.
+        </p>
+        <p class="texto-parrafo" style="margin-top: 15px; font-size: 25px;" >
+            <strong>Tu acceso incluye:</strong>
+        </p>
+        <div class="carrusel-imagenes-acceso">
+    <div class="carrusel-item">
+        <img src="img/134.jpg" alt="Baile">
+        <p class="carrusel-texto">Baile Temático del Día de Muertos</p>
+    </div>
+    <div class="carrusel-item">
+        <img src="img/485801721_1039267118222884_368085079158673954_n.jpg" alt="Leyendas">
+        <p class="carrusel-texto">Leyendas Vivientes</p>
+    </div>
+    <div class="carrusel-item">
+        <img src="img/Elotes.jpg" alt="Elotiza">
+        <p class="carrusel-texto">La Tradicional Elotiza</p>
+    </div>
+    <div class="carrusel-item">
+        <img src="img/_Collage  (1).png" alt="Talleres">
+        <p class="carrusel-texto">Talleres</p>
+    </div>
+</div>
+     <p class="texto-parrafo">
+            Ven con tu familia, pareja o amigos y haz de este Día de Muertos un recuerdo que se quede contigo.​
+        </p>
+        <p class="texto-parrafo">
+            <strong>$590 mxn por persona. Preventa hasta el 16 de septiembre​.</strong>
+        </p>
+            <div style="margin-top: 40px; text-align: center;"><a href="boletos.html" class="btn-naranja">Asegurar mi acceso.</a></div>
+    </section>
+
+
+    <!-- SECCIÓN: JARDÍN DE LOS RECUERDOS (Carrusel y Video pequeño) -->
+    <section class="jardin-recuerdos">
+        <div class="jardin-texto">
+            <div style="text-align: center; margin-bottom: 20px; margin-top: 30px;">
+            <img src="img/Letreros tipografia-42.png" alt="INFO EVENTO" style="max-width: 800px; width: 100%; height: auto;">
+        </div>
+            <p class="texto-parrafo">
+                “Donde el silencio de la montaña se llena con los nombres que nunca se olvidan.”​​</p><br> 
+                <p class="texto-parrafo" style="margin-top: 15px;">Un espacio para honrar a quienes ya no estan.  Se parte de este homenaje y trae una fotografía impresa de tu ser querido para regalarle un mensaje de amor y gratitud.​ <br> Un tributo colectivo que iluminara la noche en la Sierra fría. 
+            </p>
+        </div>
+        
+        <!-- Contenedor del video pequeño de demostración -->
+        <div class="pequeno-video-container">
+            <video autoplay muted loop playsinline class="pequeno-video">
+                <source src="img/0820 (1).mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- SECCIÓN DE PREVENTA -->
+    <section class="preventa">
+        <div class="preventa-caja">
+            <div style="text-align: center; margin-bottom: 20px;">
+            <img src="img/Letreros tipografia-43 (1).png" alt="INFO EVENTO" style="max-width: 600px; width: 100%; height: auto;">
+        </div>
+            <p>¡Que no te lo cuenten! Sé de los primeros en asegurar su entrada a esta experiencia inolvidable.</p>
+            <p class="precio">$590.00 MXN <span>por persona</span></p>
+            <a href="boletos.html" class="btn-naranja">Comprar Accesos</a>
+            <p><em><strong>*Disponible hasta el 16 de Septiembre*</strong></em></p><br><p><strong>Después $640 por persona</strong></p>
+        </div>
+    </section>
+
+        <!-- Carrusel de imágenes (solo CSS, desplazable horizontalmente) -->
+        <!-- Carrusel de imágenes (solo CSS, desplazable horizontalmente) -->
+        <section>
+            <div style="text-align: center; margin-bottom: 20px;">
+           <img src="img/Letreros tipografia-43 (1).png" alt="INFO EVENTO" style="max-width: 600px; width: 100%; height: auto;">
+           </div>    
+        <div class="carrusel-imagenes">
+            <div class="carrusel-item"><img src="img/baile.jpg" alt="BAILE TEMÁTICO"></div>
+            <div class="carrusel-item"><img src="img/gente.jpg" alt="GENTE EN EL EVENTO"></div>
+            <div class="carrusel-item"><img src="img/jr.jpg" alt="LA TRADICIONAL ELOTIZA"></div>
+            <div class="carrusel-item"><img src="img/gc.jpg" alt="LEYENDAS VIVIENTES"></div>
+            <div class="carrusel-item"><img src="img/bailes.jpg" alt="TALLERES"></div>
+            <div class="carrusel-item"><img src="img/gvnt.jpg" alt="FAMILIA"></div>
+            <div class="carrusel-item"><img src="img/nb.jpg" alt="BAILE VNT 2026"></div>
+            <div class="carrusel-item"><img src="img/adm.jpg" alt="ANTES DE MORIR"></div>
+            <div class="carrusel-item"><img src="img/mujerb.jpg" alt="BAILES"></div>
+            <div class="carrusel-item"><img src="img/fam.jpg" alt="FAMILIA"></div>
+            <div class="carrusel-item"><img src="img/altar.jpg" alt="ALTAR"></div>
+            <div class="carrusel-item"><img src="img/DSC_0047 (2) (2).jpg" alt=""></div>
+            <div class="carrusel-item"><img src="img/516772699_1119872560162339_2522266165843640774_n (1).jpg" alt=""></div>
+            <div class="carrusel-item"><img src="img/482224046_1025555322927397_861350957683504250_n (1).jpg" alt=""></div>
+            <div class="carrusel-item"><img src="img/472635192_1315065536580263_1275148251590868900_n.jpg" alt=""></div>
+            <div class="carrusel-item"><img src="img/DSC_0068 (2).jpg" alt=""></div>
+            <div class="carrusel-item"><img src="img/32.jpg" alt=""></div>
+            <div class="carrusel-item"><img src="img/476465861_1007728748043388_3241496396793927981_n.jpg" alt=""></div>
+            <div class="carrusel-item"><img src="img/472578697_1315078196578997_3947995057813809325_n (1).jpg" alt=""></div>
+            <div class="carrusel-item"><img src="img/472719653_1315069576579859_5128809173623160477_n.jpg" alt=""></div>
+            <div class="carrusel-item"><img src="img/472743897_1315066603246823_7942752351256936899_n.jpg" alt=""></div>
+            <div class="carrusel-item"><img src="img/477651997_1341171177303032_3163292390487194513_n.jpg" alt=""></div>
+        </div>
+        </section>
+
+    
+       <!-- PIE DE PÁGINA -->
+    <footer>
+        <a href="https://www.instagram.com/piedradeltesoro_campamento/"><img src="img/ig.png" alt="Instagram" width="36" height="36" style="filter: brightness(0) invert(1);"></a>
+        <a href="https://www.facebook.com/piedradeltesoro.campamento"><img src="img/face.png" alt="Facebook" width="36" height="36" style="filter: brightness(0) invert(1);"></a>
+        <a href="https://wa.me/524493974212"><img src="img/whats.png" alt="WhatsApp" width="36" height="36" style="filter: brightness(0) invert(1);"></a>
+        <a href="https://www.tiktok.com/@lapiedradeltesoro"><img src="img/tt.png" alt="TikTok" width="36" height="36" style="filter: brightness(0) invert(1);"></a>
+        <p>&copy; 2026 La Piedra del Tesoro, Aguascalientes. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+    const navbar = document.querySelector('.navbar');
+
+    // Para computadoras: Mostrar cuando el mouse está cerca del borde superior (primeros 40 pixeles)
+    window.addEventListener('mousemove', (e) => {
+        if (e.clientY <= 40) {
+            navbar.classList.add('visible');
+        } else if (e.clientY > 120 && window.scrollY > 50) {
+            // Se vuelve a ocultar si alejas el mouse y ya bajaste en la página
+            navbar.classList.remove('visible');
+        }
+    });
+
+    // Para celulares o pantallas táctiles: Hacer que aparezca/desaparezca al tocar la pantalla
+    window.addEventListener('click', (e) => {
+        // Si haces click muy cerca de la parte superior, alterna la visibilidad
+        if (e.clientY <= 100) {
+            navbar.classList.toggle('visible');
+        }
+    });
+</script>
+</body>
+</html>
